@@ -1,0 +1,32 @@
+form input {
+    height: 100%;
+    background: none;
+    border: none;
+    font-size: inherit;
+    letter-spacing: var(--letter-spacing-cell);
+}
+
+form input[type="text"] {
+    width: 100%;
+    padding: 4px;
+    color: var(--aqua-color);
+}
+
+form .create-btn {
+    width: 110px;
+    padding: 5px;
+    border: var(--border-size-btn) solid var(--color-create-btn);
+    color: var(--color-create-btn);
+    margin-inline-end: 5px;
+}
+
+form .create-btn:hover {
+    cursor: pointer;
+    background: var(--navy-light-color);
+    border-color: var(--aqua-color);
+    color: var(--aqua-color);
+}
+
+form .remove-btn {
+    padding: 5px;
+}

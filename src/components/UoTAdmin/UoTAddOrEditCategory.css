@@ -9,7 +9,7 @@ form input {
 form input[type="text"] {
     width: 100%;
     padding: 4px;
-    color: var(--aqua-color);
+    color: var(--sky-color);
 }
 
 form .create-btn {

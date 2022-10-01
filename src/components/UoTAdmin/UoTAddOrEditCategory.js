@@ -40,7 +40,7 @@ const UoTAddOrEditCategory = ({className, id}) => {
 
 
     return (
-        <form className={className}>
+        <form method="POST" className={className}>
             <span className="td"></span>
             <span className="td"
                   style={{padding: "12px var(--padding-cell)"}}>

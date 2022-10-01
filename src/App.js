@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect} from "react";
 import './index.css';
 // eslint-disable-next-line
 import {Navigate, Route, Routes} from "react-router-dom";
@@ -10,6 +10,11 @@ import Navbar from "./components/Home/Navbar";
 import UoTAddOrEditCategory from "./components/UoTAdmin/UoTAddOrEditCategory";
 
 const App = () => {
+
+    useEffect(() => {
+        document.title = "Kartven"
+    }, []);
+
     return (
         <div className="container">
             <Navbar/>

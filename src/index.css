@@ -1,7 +1,10 @@
 :root {
     --native-color: #b6b6b6;
     --navy-color: #081426;
+    --navy-dark-color: #09090d;
+    --first-stage-color: #61a5ff;
     --aqua-color: #67e3c2;
+    --sky-color: #61a5ff;
     --navy-light-color: #0a1e3a;
 }
 
@@ -39,7 +42,7 @@ body {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    background: var(--navy-color);
+    background: var(--navy-dark-color);
     width: 100%;
 }
 
@@ -55,4 +58,8 @@ section {
     margin: 0 auto;
     padding: 100px 0;
     max-width: 1000px;
+}
+
+a {
+    cursor: pointer;
 }

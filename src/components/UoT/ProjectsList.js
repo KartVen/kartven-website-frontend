@@ -3,6 +3,7 @@ import {Link} from "react-router-dom";
 import useApi from "../../hooks/useApi";
 import {useState} from "react";
 import {FiExternalLink, FiFolder} from "react-icons/fi";
+import {node} from "prop-types";
 
 const ProjectsList = () => {
     const iconSize = 20;
@@ -29,17 +30,30 @@ const ProjectsList = () => {
                 {
                     <ul>
                         {
-                            categories.length > 0 &&
-                            categories.map(({id, listOfLink}) => categoryId === id && listOfLink.map(({id, name, href}) => (
-                                <li key={id}>
-                                    <Link to={href}>
-                                        <p className="link-cnt"><FiFolder size={iconSize} className="folder-ico"/>{name}</p>
-                                        <div className="link-tool">
-                                            <FiExternalLink size={iconSize}/>
-                                        </div>
-                                    </Link>
-                                </li>
-                            )))
+                            categories.length > 0 ? (
+                                categories.map(({id, listOfLink}) => categoryId === id && listOfLink.map(({
+                                                                                                              id,
+                                                                                                              name,
+                                                                                                              href
+                                                                                                          }) => (
+                                    <li key={id}>
+                                        <Link to={href}>
+                                            <p className="link-cnt"><FiFolder size={iconSize}
+                                                                              className="folder-ico"/>{name}
+                                            </p>
+                                            <div className="link-tool">
+                                                <FiExternalLink size={iconSize}/>
+                                            </div>
+                                        </Link>
+                                    </li>
+                                )))
+                            ) : (
+                                <Link to="admin" style={{
+                                    margin: "auto",
+                                    textDecoration: "none",
+                                    color: "var(--aqua-color)"
+                                }}>ADD LINK</Link>
+                            )
                         }
                     </ul>
                 }

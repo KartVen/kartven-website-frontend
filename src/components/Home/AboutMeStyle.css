@@ -1,0 +1,115 @@
+#about-me {
+    width: 100%;
+}
+
+#about-me .cnt {
+    display: grid;
+    grid-template-columns: 3fr 5fr;
+    align-items: center;
+    gap: clamp(10px, 4.5vw, 60px);
+}
+
+#about-me h2 {
+    font-size: 2.25rem;
+    font-weight: 700;
+    margin-top: 15px;
+}
+
+#about-me h2:after {
+    content: '';
+    display: block;
+    height: 2px;
+    width: 150px;
+    background: var(--azure-font-color);
+    margin-top: 8px;
+}
+
+@supports (width: max-content) {
+    #about-me h2 {
+        width: max-content;
+    }
+
+    #about-me h2:after {
+        width: 100%;
+    }
+}
+
+#about-me .avatar {
+    overflow: hidden;
+    position: relative;
+    height: max-content;
+}
+
+#about-me .avatar:after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--native-bg-color);
+    opacity: .25;
+}
+
+#about-me .avatar:hover:after {
+    transition: opacity 250ms ease-in;
+    opacity: .05;
+}
+
+#about-me img {
+    width: 100%;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+    padding: 15px;
+    border: 1px solid #333;
+}
+
+#about-me p {
+padding-top: 10px;
+font-size: 1.05rem;
+}
+
+.about-card {
+display: table;
+}
+
+.about-card > span {
+display: table-row;
+}
+
+.about-card > span span {
+display: table-cell;
+padding: 5px 0;
+}
+
+.about-card > span span.th {
+width: max-content;
+width: -moz-max-content;
+color: #daa520;
+letter-spacing: .5px;
+font-style: italic;
+font-weight: 500;
+}
+
+.about-card > span span:not(.th) {
+padding-left: 20px;
+font-style: italic;
+}
+
+@media screen and (max-width: 768px) {
+#about-me .cnt {
+    grid-template-columns: 1fr;
+}
+
+#about-me .avatar {
+    grid-row: 2;
+    max-width: 300px;
+}
+
+#about-me .avatar,
+#about-me h2 {
+    margin-left: auto;
+    margin-right: auto;
+}
+}
+

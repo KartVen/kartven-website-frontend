@@ -1,0 +1,49 @@
+.hero-box .mask {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+
+.hero-box .mask::after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    inset: 0 auto auto 0;
+    background-color: #000;
+    opacity: .5;
+}
+
+.hero-box img {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    object-fit: cover;
+}
+.hero-box .cnt {
+    position: absolute;
+    inset: 50% 0 0 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.hero-box .cnt h4,
+.hero-box .cnt h2 {
+    margin: 0;
+    padding: 0 10px 0;
+    width: 100%;
+    font-style: italic;
+}
+
+.hero-box .cnt h4 {
+    font-size: clamp(0.6rem, 4.5vw, 1.2rem);
+    letter-spacing: 2px;
+}
+
+.hero-box .cnt h2 {
+    font-size: clamp(2rem, 4.5vw, 4rem);
+}

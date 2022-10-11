@@ -1,20 +1,20 @@
-import './HeroImage.css';
-import React from "react";
-import HeroJPG from "../../assets/webdev_bg.jpg";
-
+import './HeroImageStyle.css'
+import HeroIMG from '../../assets/hero_bg.jpg'
 
 const HeroImage = () => {
     return (
-        <div className="hero hero-box">
+        <div className="hero-box">
             <div className="mask">
-                <img src={HeroJPG} alt={document.title}/>
+                <img src={HeroIMG} alt={document.title}/>
             </div>
             <div className="cnt">
                 <div>
-                    <h1 className="cnt-lg">Witma. - GD</h1>
-                </div>
-                <div>
-                    <h2 className="cnt-lg">Platforma działa poprawnie.</h2>
+                    <div>
+                        <h4 className="cnt-lg">Witma. - GD</h4>
+                    </div>
+                    <div>
+                        <h2 className="cnt-lg">Platforma działa poprawnie.</h2>
+                    </div>
                 </div>
             </div>
         </div>

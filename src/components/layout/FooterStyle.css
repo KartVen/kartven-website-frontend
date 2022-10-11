@@ -1,0 +1,23 @@
+footer {
+    margin: 40px 0 20px;
+}
+
+footer > * {
+    width: 100%;
+    text-align: center;
+}
+
+.footer-sub {
+    margin: 20px 0 15px;
+    font-size: 0.875rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-sub svg {
+    margin-inline: 5px;
+    display: flex;
+    align-self: center;
+}
+

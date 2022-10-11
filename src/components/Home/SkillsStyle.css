@@ -1,0 +1,70 @@
+.section-title {
+    font-size: 3rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.skills-list > span {
+    display: block;
+    text-align: center;
+    padding: 5px;
+    margin: 16px 0 8px;
+    color: var(--azure-font-color);
+}
+
+.skills-list > div {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: clamp(20px, 4vw, 50px);
+    grid-row-gap: 20px;
+}
+
+.skills-list .card {
+    width: 100%;
+    font-size: 1.1rem;
+    font-style: italic;
+    padding: 5px;
+    letter-spacing: .2px;
+}
+
+.skills-list .card div:first-child {
+    padding-left: 3px;
+}
+
+.skills-list .card .bar {
+    --bar-height: 10px;
+
+    width: 100%;
+    height: var(--bar-height);
+    background: var(--azure-font-color);
+    margin-top: 8px;
+    position: relative;
+    border-radius: 25px;
+}
+
+.skills-list .card .bar span {
+    position: absolute;
+    width: 100%;
+    height: var(--bar-height);
+    border-radius: inherit;
+}
+
+.skills-list .card:hover {
+    background: var(--light-bg-color);
+    transition: background 250ms ease-in;
+    border-radius: 5px;
+}
+
+@media screen and (max-width: 768px) {
+    .skills-list > div {
+        grid-template-columns: 1fr;
+    }
+
+    .card {
+        max-width: 485px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
